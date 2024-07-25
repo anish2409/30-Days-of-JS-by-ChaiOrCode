@@ -1,0 +1,23 @@
+//Add a sub,it event listener to a from that prevents the default submission and logs the from data to console.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 7</title>
+</head>
+<body>
+    <form id="myFrom">
+        <input type="text" name="name" placeholder="Name">
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('myFrom').addEventListener('submit',function(event){
+            event.preventDefault();
+            console.log('From data:'+new FormData(this).toString());
+        });
+    </script>
+</body>
+</html>
