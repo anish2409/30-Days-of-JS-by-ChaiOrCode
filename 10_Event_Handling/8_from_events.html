@@ -1,0 +1,24 @@
+//Add a change event listener to select dropdown that displays the selected value in paragraph.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 8</title>
+</head>
+<body>
+    <select  id="mySelect">
+        <option value="option 1">Option 1</option>
+        <option value="option 2">Option 2</option>
+        <option value="option 3">Option 3</option>
+    </select>
+    <p id="displayValue"></p>
+
+    <script>
+        document.getElementById('mySelect').addEventListener('change',function(){
+            document.getElementById('displayValue').textContent='Selected:'+this.value;
+        });
+    </script>
+</body>
+</html>
