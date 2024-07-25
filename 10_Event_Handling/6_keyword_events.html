@@ -1,0 +1,19 @@
+//Add a keyup event listener to an input field that display the current value in the paragraph.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 6</title>
+</head>
+<body>
+    <input id="inputField" type="text" placeholder="Type Something....">
+    <p id ="displayText"></p>
+
+    <script>
+        document.getElementById('inputField').addEventListener('keyup',function(event){
+            document.getElementById('displayText').textContent=this.value;
+        });
+    </script>
+</body>
+</html>
