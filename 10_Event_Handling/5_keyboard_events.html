@@ -1,0 +1,18 @@
+//Add a keydown event listener to an input field that logs the key pressed on the control
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+<body>
+    <input id="inputField" type="text" placeholder="Type Something....">
+
+    <script>
+        document.getElementById('inputField').addEventListener('keydown',function(event){
+            console.log('Key pressed:'+event.key);
+        });
+    </script>
+</body>
+</html>
