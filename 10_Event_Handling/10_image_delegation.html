@@ -1,0 +1,28 @@
+// Add an event listener to a parent element that listens for events from dynamically added child element.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 10</title>
+</head>
+<body>
+    <div id="parentDiv">
+        <button id ="addChild">Add Child</button>
+    </div>
+
+    <script>
+        document.getElementById('parentDiv').addEventListener('click',function(event){
+            if(event.target.className === 'child'){
+                alert('Child element clicked!')
+            }
+        });
+        document.getElementById('addChild').addEventListener('click',function(event){
+            var newChild=document.createElement('div');
+            newChild.className='child';
+            newChild.textContent='I am a new child';
+            document.getElementById('parentDiv').appendChild(newChild);
+        });
+    </script>
+</body>
+</html>
